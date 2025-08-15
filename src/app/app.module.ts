@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UserRegistrationModule } from './user-registration/user-registration.module';
 import { BookingModule } from './booking/booking.module';
 import { HomeComponent } from './shared/home/home/home.component';
+import { RestroListModule } from './restro-list/restro-list.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { HomeComponent } from './shared/home/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RestroListModule,
+    BookingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
