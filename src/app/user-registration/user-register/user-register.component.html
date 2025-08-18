@@ -1,0 +1,14 @@
+<p>user-register works!</p>
+
+<p>user name is: {{name}}</p>
+<button (click)="updateName()">Click Me!</button>
+
+<div *ngFor="let employee of employees; let i=index">
+    <div *ngIf="employee.isVisible">
+         <p>Name : {{employee.name}}</p>
+         <p>Age: {{employee.age}}</p>
+         <p>salary : {{employee.salary}}</p>
+         <button (click)="toggleVisibility(i)">toggleVisiblity</button>
+    </div>
+   
+</div>
