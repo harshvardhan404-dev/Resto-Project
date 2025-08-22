@@ -4,8 +4,6 @@ import { BookingComponent } from './booking/booking.component';
 import { BookTableComponent } from './book-table/book-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     BookingComponent,
