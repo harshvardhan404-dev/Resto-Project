@@ -3,12 +3,80 @@
 <p>user name is: {{name}}</p>
 <button (click)="updateName()">Click Me!</button>
 
-<div *ngFor="let employee of employees; let i=index">
-    <div *ngIf="employee.isVisible">
-         <p>Name : {{employee.name}}</p>
-         <p>Age: {{employee.age}}</p>
-         <p>salary : {{employee.salary}}</p>
-         <button (click)="toggleVisibility(i)">toggleVisiblity</button>
+<div *ngFor="let employee of employees; let i = index">
+  <div *ngIf="employee.isVisible">
+    <p>Name : {{employee.name}}</p>
+    <p>Age: {{employee.age}}</p>
+    <p>Salary : {{employee.salary}}</p>
+    <button (click)="toggleVisibility(i)">Toggle Visibility</button>
+  </div>
+</div>
+
+<div>
+  <input [(ngModel)]="username" placeholder="Enter your name" />
+  <p>Hello {{username}}</p>
+</div>
+
+<div class="register-container">
+  <h2>User Registration</h2>
+
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="register-form">
+
+    <div class="form-group">
+      <label for="name">Enter name:</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your full name"
+        class="form-control"
+        [(ngModel)]="user.name"
+        name="name"
+        required
+      />
     </div>
-   
+
+
+    <div class="form-group">
+      <label for="email">Enter email:</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        class="form-control"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+        email
+      />
+    </div>
+
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Enter your phone number"
+        class="form-control"
+        [(ngModel)]="user.phone"
+        name="phone"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        placeholder="Enter a password"
+        [(ngModel)]="user.password"
+        name="password"
+        required
+      />
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
 </div>
