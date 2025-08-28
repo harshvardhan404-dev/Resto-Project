@@ -5,16 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserRegistrationModule } from './user-registration/user-registration.module';
 import { BookingModule } from './booking/booking.module';
+import { HomeComponent } from './shared/home/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserRegistrationModule,
-    BookingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
