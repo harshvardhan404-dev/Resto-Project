@@ -16,7 +16,7 @@ export class BookTableComponent {
   bookingDetails = this.formBuilder.group({
     bookingDate: new FormControl<string>('', [Validators.required]),
     bookingTime: new FormControl<string>('', Validators.maxLength(4)),
-    headCount: new FormControl<number>(0, Validators.maxLength(6))
+    headCount: new FormControl<number>(0, Validators.max(6))
   });
 
   constructor(private formBuilder: FormBuilder, private bookingService: BookingService) { }
